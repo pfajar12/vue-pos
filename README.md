@@ -1,9 +1,7 @@
 # simple-pos
 
 ## Click here to see live preview
-```
 https://pfajar12.github.io/vue-simple-pos/
-```
 
 
 ## Project setup
