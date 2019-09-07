@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container-fluid">
+    <div id="top-side">
+      <Search />
+    </div>
+    <div id="bottom-side" class="col-12">
+      <div class="row">
+        <ItemDisplay />
+        <Counter />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ItemDisplay from "./components/ItemDisplay.vue";
+import Counter from "./components/Counter.vue";
+import Search from "./components/Search.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    ItemDisplay,
+    Counter,
+    Search
   }
-}
+};
 </script>
 
-<style>
+<style scope>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
+}
+
+#bottom-side {
+  /* display: flex; */
 }
 </style>
