@@ -19,5 +19,8 @@ export default {
     },
     priceTotal: state => {
         return state.priceTotal
+    },
+    priceTotalHelper: state => {
+        return state.priceTotalHelper
     }
 }

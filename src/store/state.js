@@ -4,6 +4,7 @@ export default {
     activeCategory: 'all',
     productOrdered: [],
     priceTotal: 0,
+    priceTotalHelper: 0,
     products: [
         {
             id: 1,

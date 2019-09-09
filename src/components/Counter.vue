@@ -18,7 +18,7 @@
               </tr>
               <tr v-for="(item, index) in productOrdered" :key="index">
                 <td>{{item.name}}</td>
-                <td>1</td>
+                <td>{{item.qty}}</td>
                 <td>${{item.price}}</td>
                 <td>
                   <button class="btn btn-danger btn-sm" @click="removeOrderedProduct(index)">x</button>
@@ -42,7 +42,7 @@
 import { mapGetters, mapActions } from "vuex";
 export default {
   computed: {
-    ...mapGetters(["productOrdered", "priceTotal"])
+    ...mapGetters(["productOrdered", "priceTotal", "priceTotalHelper"])
   },
   methods: {
     ...mapActions(["removeOrderedProduct"])

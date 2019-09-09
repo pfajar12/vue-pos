@@ -14,6 +14,7 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title text-truncate">{{product.name}}</h5>
+                <h5 class="card-title">${{product.price}}</h5>
                 <a href="#" class="btn btn-primary" @click.prevent="orderProduct(product)">ORDER</a>
               </div>
             </div>
