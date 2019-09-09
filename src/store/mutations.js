@@ -45,7 +45,7 @@ export default {
                     imgUrl: product.imgUrl,
                     qty: 1
                 })
-                state.priceTotalHelper += product.price
+                state.priceTotalHelper = product.price + state.priceTotal
             }
         }
 
@@ -53,6 +53,7 @@ export default {
     },
     [mutations.REMOVE_ORDERED_PRODUCT](state, index) {
         state.priceTotal = state.priceTotal - state.productOrdered[index].price
+        state.priceTotalHelper = state.priceTotalHelper - state.productOrdered[index].price
         state.productOrdered.splice(index, 1)
     }
 }
